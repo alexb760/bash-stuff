@@ -15,7 +15,9 @@ some basic criteria or some patern like regex.
  * `\1 \2 \3` Back references, you can refere to any specif region of the regular expresion just indicating the nmb   er. if can start from 1 and whatever you need.
 
 ## Why `sed-move-and-modifying.sh`
-  It will move some file from one directory to another directory, in the way to do so it will modify some file base  on some patterns.
+  It will move some file from one directory to another directory, in the way to do so it will modify some file base  on some patterns we pretent to search in all the privided list of files `list-file-to-move.txt` and search the fo  llowing patterns.
+   1. `sed -i '/@AwesomeAnnotation/d'` and delete that line.
+   2. if the file contains the fallowing regex ` 'extends .+([1])'` (extends following to any character and ends in      1) then apply the following command `sed -E -i 's/(extends .+).$/\1/'` delinting last character in the matche      s pattern.
 
 ## How to run.
 
